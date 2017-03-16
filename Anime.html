@@ -53,6 +53,29 @@
 		ctx.fillRect(x , y , 10 ,10); //desenha um quadrado		
 		antes = agora;
 	}
+
+	addEventListener("keydown", teclaPressionada);
+
+	function teclaPressionada(evento){
+		console.log(evento.keyCode);
+		switch(evento.keyCode){
+			case 37:
+				vx = -vm;
+				break;
+			case 39:
+				vx = +vm;
+				break;
+			case 38:
+				vy = -vm;
+				break;
+			case 40:
+				vy = +vm;
+				break;
+			default:
+			vx = 0;
+			vy = 0;
+		}
+	}
 	</script>
 </body>
 </html>
