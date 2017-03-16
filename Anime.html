@@ -25,8 +25,10 @@
 		pc.y = 50;
 		pc.color = "red";
 
-
-
+		var npc = new Sprite();
+		npc.x = 100;
+		npc.y = 10;
+		npc.color = "blue";
 
 		var antes = new Date();
 		var agora = new Date();
@@ -50,12 +52,12 @@
 		//final
 
 		ctx.clearRect(0,0, eCanvas.width, eCanvas.height);
-
-		ctx.strokeText("fps: " + Math.floor(1/dt) , 10 ,20); //desenha texto
+		ctx.strokeText("fps: " + Math.floor(1/dt) , 10 ,20); //desenha texto		
 
 		pc.mover(dt);
-
 		pc.desenhar(ctx);
+		npc.mover(dt);
+		npc.desenhar(ctx);
 
 		antes = agora;
 	}

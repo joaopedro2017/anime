@@ -4,7 +4,7 @@ function Sprite(){
 	this.vx = 0;
 	this.vy = 0;
 	this.vm = 150;
-	this.color = "yellow";
+	this.color = "black";
 
 	this.mover = function(dt){
 		this.x = this.x + this.vx *dt;
