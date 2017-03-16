@@ -20,7 +20,9 @@
 		var eCanvas = document.getElementsByTagName("canvas")[0];
 		var ctx = eCanvas.getContext("2d");
 
-		var x = 10, vx = 30;
+		var x = 10, vx = 0;
+		var y = 20, vy = 0;
+		var vm = 150;
 
 		var antes = new Date();
 		var agora = new Date();
@@ -47,6 +49,7 @@
 
 		ctx.strokeText("fps: " + Math.floor(1/dt) , 10 ,20); //desenha texto
 		x = x + vx *dt;
+		y = y + vy *dt;
 		ctx.fillRect(x ,50, 10 ,10); //desenha um quadrado		
 		antes = agora;
 	}
