@@ -55,6 +55,7 @@
 	}
 
 	addEventListener("keydown", teclaPressionada);
+	addEventListener("keyup", teclaSolta);
 
 	function teclaPressionada(evento){
 		console.log(evento.keyCode);
@@ -74,6 +75,19 @@
 			default:
 			vx = 0;
 			vy = 0;
+		}
+	}
+
+	function teclaSolta(evento){
+		console.log(evento.keyCode);
+		switch(evento.keyCode){
+			case 37:				
+			case 39:
+				vx = 0;
+				break;
+			case 38:				
+			case 40:
+				vy = 0;			
 		}
 	}
 	</script>
