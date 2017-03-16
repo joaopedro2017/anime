@@ -9,4 +9,8 @@ function Sprite(){
 		this.x = this.x + this.vx *dt;
 		this.y = this.y + this.vy *dt;
 	}
+
+	this.desenhar = function(ctx){
+		ctx.fillRect(this.x ,this.y, 10 ,10);
+	}
 }
