@@ -51,8 +51,9 @@
 		ctx.clearRect(0,0, eCanvas.width, eCanvas.height);
 
 		ctx.strokeText("fps: " + Math.floor(1/dt) , 10 ,20); //desenha texto
-		pc.x = pc.x + pc.vx *dt;
-		pc.y = pc.y + pc.vy *dt;
+
+		pc.mover(dt);
+
 		ctx.fillRect(pc.x , pc.y , 10 ,10); //desenha um quadrado		
 		antes = agora;
 	}

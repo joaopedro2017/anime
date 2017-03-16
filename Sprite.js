@@ -4,4 +4,9 @@ function Sprite(){
 	this.vx = 0;
 	this.vy = 0;
 	this.vm = 150;
+
+	this.mover = function(dt){
+		this.x = this.x + this.vx *dt;
+		this.y = this.y + this.vy *dt;
+	}
 }
