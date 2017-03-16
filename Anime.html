@@ -21,17 +21,35 @@
 		var ctx = eCanvas.getContext("2d");
 
 		var x = 10, xv = 30;
-		
+
 		var antes = new Date();
 		var agora = new Date();
 
 		var dt = 0;
 		var fps = 0;
-		
 
+		requestAnimationFrame(passo);
 
+		function passo(){
+		requestAnimationFrame(passo);
+		agora = new Date();
+		dt = (agora - antes)/1000;
 
+		//manipulação da div
+		/*eDiv.innerText = "p: " + p;
+		eDiv.innerText += " antes: " + antes;
+		eDiv.innerText += " agora: " + agora;
+		eDiv.innerText += " dt(s): " + dt/1000 + "s";
+		eDiv.innerText += " fps: " + 1000/dt;*/
+		//final
 
+		ctx.clearRect(0,0, eCanvas.width, eCanvas.height);
+
+		ctx.strokeText("fps: " + Math.floor(1/dt) , 10 ,20); //desenha texto
+		x = x + vx *dt;
+		ctx.fillRect(x ,50, 10 ,10); //desenha um quadrado		
+		antes = agora;
+	}
 	</script>
 </body>
 </html>
